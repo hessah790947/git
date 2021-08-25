@@ -163,6 +163,7 @@ def user_stats(df):
     print('-'*40)
 
 def data(df):
+    """Displays raw input of bikeshare data."""
     raw_input = 0
     # Asking for raw input data by using while loop.
     while True:
