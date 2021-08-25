@@ -166,27 +166,17 @@ def data(df):
     #asking for raw input data by using while loop.
     while True:
         #confirming if the user wants to see the data of not by using input.
-        raw = input('Do you want to view 5 rows of the data? type: yes or no? ').lower()
+        raw = input('Type: yes or no if you want 5 rows of the raw data displayed?  ').lower()
         if raw == 'no':
             break
         elif raw == 'yes':
             raw_input += 5
             #printing 5 rows of the data
             print(df.iloc[raw_input : raw_input + 5])
+            print(raw)
             break
         else:
             print('Wrong input')
-    while True:
-        #starting a new loop to add 5 more rows everytime the user asks to.
-        more = input('Do you want to view 5 more rows? type: yes or no? ').lower()
-        if more == 'no':
-            break
-        elif more == 'yes':
-            raw_input += 5
-            print(df.iloc[raw_input : raw_input + 5])
-            continue
-        else:
-            print('Wrong Input')
 
     return raw_input
 
