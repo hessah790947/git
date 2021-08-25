@@ -159,6 +159,7 @@ def user_stats(df):
     print('-'*40)
 
 def data(df):
+    pd.set_option('display.max_columns',200)
     raw_input = 0
     #asking for raw input data by using while loop.
     while True:
