@@ -21,7 +21,6 @@ def get_filters(city, month, day):
         city = input('Which of the following cities you want to ckeck? chicago, new york city, or washington? ' ).lower()
         if city not in CITY_DATA:
             print('Ops, no data for this city')
-            continue
         else:
             break
 
@@ -31,7 +30,6 @@ def get_filters(city, month, day):
         month = input('which month do you choose? january, february, march, april, may, june or all: ').lower()
         if month not in months:
             print('Ops, Wrong Input')
-            continue
         else:
             break
     # user input for day of week (all, monday, tuesday, ... sunday)
@@ -40,7 +38,6 @@ def get_filters(city, month, day):
         day = input('which day of the week do you choose? sunday, monday, tuesday, wednesday, thursday, friday, saterday or all: ').title()
         if day not in days:
             print('Ops, Wrong Input')
-            continue
         else:
             break
 
@@ -163,32 +160,22 @@ def user_stats(df):
     print('-'*40)
 
 def data(df):
-    """Displays raw input of bikeshare data."""
+    pd.set_option('display.max_columns',200)
     raw_input = 0
     # Asking for raw input data by using while loop.
     while True:
-        # Confirming if the user wants to see the data or not by using input.
-        raw = input('Do you want to view 5 rows of the data? type: yes or no? ').lower()
+        #confirming if the user wants to see the data of not by using input.
+        raw = input('Type: yes or no if you want 5 rows of the raw data displayed?  ').lower()
         if raw == 'no':
             break
         elif raw == 'yes':
             raw_input += 5
             # printing 5 rows of the data
             print(df.iloc[raw_input : raw_input + 5])
+            print(raw)
             break
         else:
             print('Wrong input')
-    while True:
-        # starting a new loop to add 5 more rows everytime the user asks to.
-        more = input('Do you want to view 5 more rows? type: yes or no? ').lower()
-        if more == 'no':
-            break
-        elif more == 'yes':
-            raw_input += 5
-            print(df.iloc[raw_input : raw_input + 5])
-            continue
-        else:
-            print('Wrong Input')
 
     return raw_input
 
