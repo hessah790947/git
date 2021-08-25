@@ -21,7 +21,6 @@ def get_filters(city, month, day):
         city = input('Which of the following cities you want to ckeck? chicago, new york city, or washington? ' ).lower()
         if city not in CITY_DATA:
             print('Ops, no data for this city')
-            continue
         else:
             break
 
@@ -31,7 +30,6 @@ def get_filters(city, month, day):
         month = input('which month do you choose? january, february, march, april, may, june or all: ').lower()
         if month not in months:
             print('Ops, Wrong Input')
-            continue
         else:
             break
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
@@ -40,7 +38,6 @@ def get_filters(city, month, day):
         day = input('which day of the week do you choose? sunday, monday, tuesday, wednesday, thursday, friday, saterday or all: ').title()
         if day not in days:
             print('Ops, Wrong Input')
-            continue
         else:
             break
 
