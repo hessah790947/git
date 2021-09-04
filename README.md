@@ -4,7 +4,7 @@
 this project and README file was created on 23/08/2021
 
 ### Project Title
-explore US bikeshare data project
+explore US bikeshare data project refactoring
 
 ### Description
 a program displays bikeshare company data for three cities by filtering on three categories that user input chooses. filtering based on which city and by month or day.
